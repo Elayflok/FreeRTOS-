@@ -19,19 +19,19 @@ void start_task(void *pvParameters);
 
 /* 任务1的配置 */
 #define TASK1_STACK 128
-#define TASK1_Priority 1
+#define TASK1_Priority 2
 TaskHandle_t task1_handle;
 void task1(void *pvParameters);
 
 /* 任务2的配置 */
 #define TASK2_STACK 128
-#define TASK2_Priority 1
+#define TASK2_Priority 3
 TaskHandle_t task2_handle;
 void task2(void *pvParameters);
 
 /* 任务3的配置 */
 #define TASK3_STACK 128
-#define TASK3_Priority 1
+#define TASK3_Priority 4
 TaskHandle_t task3_handle;
 void task3(void *pvParameters);
 
@@ -77,7 +77,7 @@ void start_task(void *pvParameters)
 }
 
 /**
- * @description: 任务一：实现LED1每500m闪烁一次
+ * @description: 任务一：实现lED1每500ms闪烁一次
  * @param {void} *pvParameters
  * @return {*}
  */
@@ -86,23 +86,39 @@ void task1(void *pvParameters)
     while (1)
     {
         printf("task1运行....\r\n");
+        //LED1翻转任务
+        vTaskDelay(500);
     }
 }
 
 /**
- * @description:
+ * @description:任务二：实现LED2每500ms闪烁一次
  * @param {void} *pvParameters
  * @return {*}
  */
 void task2(void *pvParameters)
 {
+        while (1)
+    {
+        printf("task2运行....\r\n");
+        //LED2翻转任务
+        vTaskDelay(500);
+    }
 }
 
 /**
- * @description:
+ * @description:任务三:
  * @param {void} *pvParameters
  * @return {*}
  */
 void task3(void *pvParameters)
 {
+        while (1)
+    {
+        printf("task3运行....\r\n");
+
+
+        printf("执行删除task1....\r\n");
+    }
 }
+

@@ -30,3 +30,4 @@ led_freertos\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
 led_freertos\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
 led_freertos\main.o: ../Core/Inc/usart.h
 led_freertos\main.o: ../Core/Inc/gpio.h
+led_freertos\main.o: ../Core/Inc/freertos_demo.h
