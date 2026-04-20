@@ -2,7 +2,7 @@
  * @Author: Elayflok 2103307819@qq.com
  * @Date: 2026-04-20 10:34:15
  * @LastEditors: Elayflok 2103307819@qq.com
- * @LastEditTime: 2026-04-20 11:16:36
+ * @LastEditTime: 2026-04-20 11:38:54
  * @FilePath: \LED_Freertos\Core\Src\freertos_demo.c
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -83,12 +83,26 @@ void start_task(void *pvParameters)
  */
 void task1(void *pvParameters)
 {
+    while (1)
+    {
+        printf("task1运行....\r\n");
+    }
 }
 
+/**
+ * @description:
+ * @param {void} *pvParameters
+ * @return {*}
+ */
 void task2(void *pvParameters)
 {
 }
 
+/**
+ * @description:
+ * @param {void} *pvParameters
+ * @return {*}
+ */
 void task3(void *pvParameters)
 {
 }
